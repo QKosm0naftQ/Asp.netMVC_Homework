@@ -10,7 +10,8 @@ namespace WebProgram.Mapper
         {
             CreateMap<CategoryEntity, CategoryItemViewModel>()
                 .ForMember(x => x.Image, opt => opt.MapFrom(x => x.ImageUrl));
-            CreateMap<CategoryCreateViewModel, CategoryEntity>();
+            CreateMap<CategoryCreateViewModel, CategoryEntity>()
+                .ForMember(x => x.ImageUrl, opt => opt.Ignore());
 
 
             CreateMap<CategoryEditViewModel, CategoryEntity>()

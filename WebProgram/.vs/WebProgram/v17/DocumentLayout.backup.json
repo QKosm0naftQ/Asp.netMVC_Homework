@@ -5,6 +5,18 @@
     {
       "AbsoluteMoniker": "D:0:0:{2B3D2928-3967-417A-8F9B-422051DEA126}|WebProgram.csproj|c:\\users\\kostya\\source\\website\\aspnet_homework\\webprogram\\views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
       "RelativeMoniker": "D:0:0:{2B3D2928-3967-417A-8F9B-422051DEA126}|WebProgram.csproj|solutionrelative:views\\categories\\index.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B3D2928-3967-417A-8F9B-422051DEA126}|WebProgram.csproj|c:\\users\\kostya\\source\\website\\aspnet_homework\\webprogram\\views\\categories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}",
+      "RelativeMoniker": "D:0:0:{2B3D2928-3967-417A-8F9B-422051DEA126}|WebProgram.csproj|solutionrelative:views\\categories\\create.cshtml||{40D31677-CBC0-4297-A9EF-89D907823A98}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B3D2928-3967-417A-8F9B-422051DEA126}|WebProgram.csproj|c:\\users\\kostya\\source\\website\\aspnet_homework\\webprogram\\models\\category\\categorycreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B3D2928-3967-417A-8F9B-422051DEA126}|WebProgram.csproj|solutionrelative:models\\category\\categorycreateviewmodel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{2B3D2928-3967-417A-8F9B-422051DEA126}|WebProgram.csproj|c:\\users\\kostya\\source\\website\\aspnet_homework\\webprogram\\controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{2B3D2928-3967-417A-8F9B-422051DEA126}|WebProgram.csproj|solutionrelative:controllers\\categoriescontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -32,9 +44,48 @@
               "RelativeDocumentMoniker": "Views\\Categories\\Index.cshtml",
               "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\Views\\Categories\\Index.cshtml",
               "RelativeToolTip": "Views\\Categories\\Index.cshtml",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAMAAABEAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAA3AAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
-              "WhenOpened": "2025-05-01T08:22:14.892Z",
+              "WhenOpened": "2025-05-01T12:13:08.361Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "CategoryCreateViewModel.cs",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\Models\\Category\\CategoryCreateViewModel.cs",
+              "RelativeDocumentMoniker": "Models\\Category\\CategoryCreateViewModel.cs",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\Models\\Category\\CategoryCreateViewModel.cs",
+              "RelativeToolTip": "Models\\Category\\CategoryCreateViewModel.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T12:02:22.096Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Create.cshtml",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\Views\\Categories\\Create.cshtml",
+              "RelativeDocumentMoniker": "Views\\Categories\\Create.cshtml",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\Views\\Categories\\Create.cshtml",
+              "RelativeToolTip": "Views\\Categories\\Create.cshtml",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAQAAACIAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000759|",
+              "WhenOpened": "2025-05-01T12:01:05.037Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "CategoriesController.cs",
+              "DocumentMoniker": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\Controllers\\CategoriesController.cs",
+              "RelativeDocumentMoniker": "Controllers\\CategoriesController.cs",
+              "ToolTip": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\Controllers\\CategoriesController.cs",
+              "RelativeToolTip": "Controllers\\CategoriesController.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwBkAAAAMAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-05-01T11:39:51.691Z",
               "EditorCaption": ""
             }
           ]

@@ -3,11 +3,12 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using WebProgram.Data;
 using WebProgram.Data.Entities;
+using WebProgram.Interface;
 using WebProgram.Models.Category;
 
 namespace WebProgram.Controllers
 {
-    public class CategoriesController(AppProgramDbContext context, IMapper mapper) : Controller
+    public class CategoriesController(AppProgramDbContext context, IMapper mapper , IImageService imageService) : Controller
     {
         public IActionResult Index()
         {
@@ -30,6 +31,7 @@ namespace WebProgram.Controllers
             }
 
             item = mapper.Map<CategoryEntity>(model);
+            item.ImageUrl = await imageService.SaveImageAsync(model.ImageFile);
             await context.Categories.AddAsync(item);
             await context.SaveChangesAsync();
 

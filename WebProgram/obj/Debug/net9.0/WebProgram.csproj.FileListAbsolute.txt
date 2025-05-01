@@ -198,3 +198,5 @@ C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\obj\Debug\net9.0\WebPr
 C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\bin\Debug\net9.0\Helpers\JsonData\CategoriesJson.json
 C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\bin\Debug\net9.0\AutoMapper.dll
 C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\obj\Debug\net9.0\staticwebassets.upToDateCheck.txt
+C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\obj\Debug\net9.0\WebProgram.sourcelink.json
+C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\bin\Debug\net9.0\SixLabors.ImageSharp.dll
