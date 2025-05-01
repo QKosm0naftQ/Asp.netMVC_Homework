@@ -198,3 +198,5 @@ C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\obj\Release\net9.0\ref
 C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\obj\Release\net9.0\WebProgram.pdb
 C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\obj\Release\net9.0\WebProgram.genruntimeconfig.cache
 C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\obj\Release\net9.0\ref\WebProgram.dll
+C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\bin\Release\net9.0\SixLabors.ImageSharp.dll
+C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\obj\Release\net9.0\WebProgram.sourcelink.json

@@ -11,8 +11,8 @@ namespace WebProgram.Models.Category
 
         [Display(Name = "Опис - Редагування")]
         public string? Description { get; set; } = string.Empty;
-
-        [Display(Name = "Url адреса фото - Редагування")]
-        public string ImageUrl { get; set; } = string.Empty;
+        
+        [Display(Name = "Ваше фото - Редагування")]
+        public IFormFile ImageFile { get; set; } = null!;
     }
 }

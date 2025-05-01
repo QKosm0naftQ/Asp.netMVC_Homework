@@ -64,6 +64,7 @@ namespace WebProgram.Controllers
                 return View(model);
             }
             item = mapper.Map(model, item);
+            item.ImageUrl = await imageService.SaveImageAsync(model.ImageFile);
 
             await context.SaveChangesAsync();
             return RedirectToAction(nameof(Index));

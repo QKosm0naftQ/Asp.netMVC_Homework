@@ -13,9 +13,8 @@ namespace WebProgram.Mapper
             CreateMap<CategoryCreateViewModel, CategoryEntity>()
                 .ForMember(x => x.ImageUrl, opt => opt.Ignore());
 
-
             CreateMap<CategoryEditViewModel, CategoryEntity>()
-                .ReverseMap();
+                .ReverseMap().ForMember(x => x.ImageFile, opt => opt.Ignore()); ;
         }
     }
 }
