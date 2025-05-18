@@ -1,9 +1,8 @@
-﻿namespace WebProgram.Models.Seeder
+﻿namespace WebProgram.Models.Seeder;
+
+public class SeederCategoryModel
 {
-    public class SeederCategoryModel
-    {
-        public string Name { get; set; } = String.Empty;
-        public string Description { get; set; } = String.Empty;
-        public string Image { get; set; } = String.Empty;
-    }
+    public string Name { get; set; } = String.Empty;
+    public string Description { get; set; } = String.Empty;
+    public string Image { get; set; } = String.Empty;
 }

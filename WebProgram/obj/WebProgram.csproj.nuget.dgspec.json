@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\WebProgram.csproj": {}
+    "C:\\Users\\Kostya\\source\\WebSite\\AspNetMVC_homework\\WebProgram\\WebProgram.csproj": {}
   },
   "projects": {
-    "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\WebProgram.csproj": {
+    "C:\\Users\\Kostya\\source\\WebSite\\AspNetMVC_homework\\WebProgram\\WebProgram.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\WebProgram.csproj",
+        "projectUniqueName": "C:\\Users\\Kostya\\source\\WebSite\\AspNetMVC_homework\\WebProgram\\WebProgram.csproj",
         "projectName": "WebProgram",
-        "projectPath": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\WebProgram.csproj",
+        "projectPath": "C:\\Users\\Kostya\\source\\WebSite\\AspNetMVC_homework\\WebProgram\\WebProgram.csproj",
         "packagesPath": "C:\\Users\\Kostya\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\Kostya\\source\\WebSite\\AspNet_homework\\WebProgram\\obj\\",
+        "outputPath": "C:\\Users\\Kostya\\source\\WebSite\\AspNetMVC_homework\\WebProgram\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -54,6 +54,10 @@
               "target": "Package",
               "version": "[14.0.0, )"
             },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
             "Microsoft.EntityFrameworkCore.Design": {
               "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
               "suppressParent": "All",
@@ -65,6 +69,10 @@
               "suppressParent": "All",
               "target": "Package",
               "version": "[9.0.4, )"
+            },
+            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
+              "target": "Package",
+              "version": "[9.0.0, )"
             },
             "Npgsql.EntityFrameworkCore.PostgreSQL": {
               "target": "Package",

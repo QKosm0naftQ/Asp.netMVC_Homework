@@ -2,14 +2,13 @@
 using WebProgram.Data.Entities;
 using WebProgram.Models.Seeder;
 
-namespace WebProgram.Mapper
+namespace WebProgram.Mapper;
+
+public class SeederMapper : Profile
 {
-    public class SeederMapper : Profile
+    public SeederMapper() 
     {
-        public SeederMapper()
-        {
-            CreateMap<SeederCategoryModel, CategoryEntity>()
-                .ForMember(x => x.ImageUrl, opt => opt.MapFrom(x => x.Image));
-        }
+        CreateMap<SeederCategoryModel, CategoryEntity>()
+            .ForMember(x => x.ImageUrl, opt => opt.MapFrom(x => x.Image));
     }
 }

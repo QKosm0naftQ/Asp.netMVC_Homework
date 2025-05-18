@@ -1,20 +1,22 @@
 ﻿using AutoMapper;
 using WebProgram.Data.Entities;
 using WebProgram.Models.Category;
+namespace WebProgram.Mapper;
 
-namespace WebProgram.Mapper
+public class CategoryMapper : Profile
 {
-    public class CategoryMapper : Profile
+    public CategoryMapper() 
     {
-        public CategoryMapper()
-        {
-            CreateMap<CategoryEntity, CategoryItemViewModel>()
-                .ForMember(x => x.Image, opt => opt.MapFrom(x => x.ImageUrl));
-            CreateMap<CategoryCreateViewModel, CategoryEntity>()
-                .ForMember(x => x.ImageUrl, opt => opt.Ignore());
+        CreateMap<CategoryEntity, CategoryItemViewModel>()
+            .ForMember(x => x.Image, opt => opt.MapFrom(x => x.ImageUrl));
 
-            CreateMap<CategoryEditViewModel, CategoryEntity>()
-                .ReverseMap().ForMember(x => x.ImageFile, opt => opt.Ignore()); ;
-        }
+        CreateMap<CategoryCreateViewModel, CategoryEntity>()
+            .ForMember(x=> x.ImageUrl, opt=>opt.Ignore());
+
+        CreateMap<CategoryEntity, CategoryEditViewModel>()
+            .ForMember(x => x.ViewImage, opt => opt.MapFrom(x => 
+                string.IsNullOrEmpty(x.ImageUrl) ? "/pictures/default.jpg" : $"/images/400_{x.ImageUrl}"))
+            .ForMember(x => x.ImageFile, opt => opt.Ignore())
+            .ReverseMap();
     }
 }

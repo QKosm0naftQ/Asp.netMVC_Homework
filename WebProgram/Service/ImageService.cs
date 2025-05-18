@@ -7,6 +7,56 @@ namespace WebProgram.Service
 {
     public class ImageService(IConfiguration configuration) : IImageService
     {
+        public async Task DeleteImageAsync(string name)
+        {
+            var sizes = configuration.GetRequiredSection("ImageSizes").Get<List<int>>();
+            var dir = Path.Combine(Directory.GetCurrentDirectory(), configuration["ImagesDir"]!);
+
+            Task[] tasks = sizes
+                .AsParallel()
+                .Select(size =>
+                {
+                    return Task.Run(() =>
+                    {
+                        var path = Path.Combine(dir, $"{size}_{name}");
+                        if (File.Exists(path))
+                        {
+                            File.Delete(path);
+                        }
+                    });
+                })
+                .ToArray();
+
+            await Task.WhenAll(tasks);
+        }
+
+        public async Task<IFormFile> GetImageAsync(string name)
+        {
+
+            var size = 400;
+            var dir = Path.Combine(Directory.GetCurrentDirectory(), configuration["ImagesDir"]!);
+            var path = Path.Combine(dir, $"{size}_{name}");
+
+            if (File.Exists(path))
+            {
+                var memoryStream = new MemoryStream();
+                using (var stream = new FileStream(path, FileMode.Open, FileAccess.Read))
+                {
+                    await stream.CopyToAsync(memoryStream);
+                }
+
+                memoryStream.Position = 0;
+                var file = new FormFile(memoryStream, 0, memoryStream.Length, "file", $"{size}_{name}")
+                {
+                    Headers = new HeaderDictionary(),
+                    ContentType = "image/jpeg" // або визначати MIME тип динамічно
+                };
+
+                return file;
+            }
+            return null;
+        }
+
         public async Task<string> SaveImageAsync(IFormFile file)
         {
             using MemoryStream ms = new();

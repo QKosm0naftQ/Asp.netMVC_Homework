@@ -1,31 +1,60 @@
-﻿@model CategoryEditViewModel
+﻿@model WebProgram.Models.Category.CategoryEditViewModel
 
-<div class="container">
-    <h1 class="text-center">Редагування Категорій</h1>
-    <form asp-action="Edit" class="p-4 shadow rounded bg-light" style="max-width: 600px; margin: auto;" enctype="multipart/form-data">
-        <h4 class="mb-4">Редагування</h4>
+@{
+    ViewData["Title"] = "Редагувати";
+}
 
-        <!-- Назва категорії -->
-        <div class="mb-3">
-            <label asp-for="Name" class="form-label"></label>
-            <input asp-for="Name" class="form-control" placeholder="Введіть назву категорії" required>
-            <span asp-validation-for="Name" class="text-danger"></span>
-        </div>
+<h1 class="text-center mt-4 mb-4">Редагувати категорію</h1>
 
-        <!-- Опис -->
-        <div class="mb-3">
-            <label asp-for="Description" class="form-label"></label>
-            <textarea asp-for="Description" class="form-control" rows="4" placeholder="Введіть опис категорії"></textarea>
-        </div>
+<hr />
+<div class="row justify-content-center">
+    <div class="col-md-8 col-lg-6">
+        <form asp-action="Edit" enctype="multipart/form-data" class="shadow-sm p-4 rounded bg-light">
+            @* У цьому блоці виводяться не стандартні помилки *@
+            <div asp-validation-summary="ModelOnly" class="text-danger mb-3"></div>
 
-        <!-- Зображення (URL) -->
-        <div class="mb-3">
-            <label asp-for="ImageFile" class="form-label"></label>
-            <input asp-for="ImageFile" type="file" class="form-control" accept="image/*">
-        </div>
+            <input asp-for="ViewImage" type="hidden" />
 
-        <!-- Кнопка -->
-        <button type="submit" class="btn btn-primary">Редагувати категорію</button>
-        <a asp-action="Index" class="btn btn-info">Скасувати</a>
-    </form>
+            <div class="mb-3">
+                <label asp-for="Name" class="form-label fw-semibold"></label>
+                <input asp-for="Name" class="form-control" />
+                <span asp-validation-for="Name" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-3">
+                <label asp-for="Description" class="form-label fw-semibold"></label>
+                <input asp-for="Description" class="form-control" />
+                <span asp-validation-for="Description" class="text-danger small"></span>
+            </div>
+
+            <div class="mb-4 row g-3 align-items-center">
+                <div class="col-md-4 text-center">
+                    <img src="@Model.ViewImage" id="imagePreview" class="img-thumbnail" style="max-height: 150px;" />
+                </div>
+                <div class="col-md-8">
+                    <label asp-for="ImageFile" class="form-label fw-semibold"></label>
+                    <input asp-for="ImageFile" type="file" class="form-control" accept="image/*" id="ImageFile">
+                    <span asp-validation-for="ImageFile" class="text-danger small"></span>
+                </div>
+            </div>
+
+            <div class="d-grid gap-2">
+                <input type="submit" value="Зберегти" class="btn btn-success" />
+                <a asp-action="Index" class="btn btn-outline-secondary">Повернути назад</a>
+            </div>
+        </form>
+    </div>
 </div>
+
+@section Scripts {
+    @{
+        await Html.RenderPartialAsync("_ValidationScriptsPartial");
+    }
+    <script>
+        document.getElementById("ImageFile").addEventListener("change", (e) => {
+            const file = e.target.files[0];
+            if(file)
+                document.getElementById("imagePreview").src = URL.createObjectURL(file);
+        });
+    </script>
+}
