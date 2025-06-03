@@ -55,10 +55,18 @@ app.MapStaticAssets();  //Використання статичних файлі
 //Для того, щоб при запуску сайту ми бачили, щось визивається згідного налаштувань HomeController
 //і його метод Index при цьому може бути параметер у маршруті id - але там є знак питання, тобто
 //може бути null
-app.MapControllerRoute(
-    name: "default",
-    pattern: "{controller=Categories}/{action=Index}/{id?}")
-    .WithStaticAssets();
+app.UseEndpoints(endpoints =>
+{
+    endpoints.MapAreaControllerRoute(
+      name: "admin_area",
+      areaName: "Admin",
+      pattern: "admin/{controller=Users}/{action=Index}/{id?}"
+    );
+    endpoints.MapControllerRoute(
+        name: "default",
+        pattern: "{controller=Categories}/{action=Index}/{id?}"
+    );
+});
 
 var dir = builder.Configuration["ImagesDir"];
 string path = Path.Combine(Directory.GetCurrentDirectory(), dir);

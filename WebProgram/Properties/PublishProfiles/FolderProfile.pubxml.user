@@ -4,8 +4,8 @@ https://go.microsoft.com/fwlink/?LinkID=208121.
 -->
 <Project>
   <PropertyGroup>
-    <_PublishTargetUrl>C:\Users\Kostya\source\WebSite\AspNet_homework\WebProgram\bin\Release\net9.0\publish\</_PublishTargetUrl>
-    <History>True|2025-04-29T12:23:44.6422103Z||;</History>
+    <_PublishTargetUrl>C:\Users\Kostya\source\WebSite\AspNetMVC_homework\WebProgram\bin\Release\net9.0\publish\</_PublishTargetUrl>
+    <History>True|2025-06-03T12:50:52.2607722Z||;True|2025-04-29T14:23:44.6422103+02:00||;</History>
     <LastFailureDetails />
   </PropertyGroup>
 </Project>
