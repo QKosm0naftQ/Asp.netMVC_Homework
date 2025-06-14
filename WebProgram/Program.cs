@@ -1,7 +1,7 @@
 ﻿using Microsoft.AspNetCore.Identity;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.FileProviders;
-using Microsoft.Extensions.FileProviders.Physical;  // з 29.04 дз 
+using Microsoft.Extensions.FileProviders.Physical;  
 using WebProgram.Data;
 using WebProgram.Data.Entities.Identity;
 using WebProgram.Interface;

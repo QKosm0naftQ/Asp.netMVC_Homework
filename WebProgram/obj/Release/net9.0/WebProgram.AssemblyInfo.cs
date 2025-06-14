@@ -14,7 +14,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("WebProgram")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Release")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+a5e58b05956736a12a13d753f174a1bf6a0ee5b5")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+060990bb89f7073a0acedf8006cfa3b28cc01c69")]
 [assembly: System.Reflection.AssemblyProductAttribute("WebProgram")]
 [assembly: System.Reflection.AssemblyTitleAttribute("WebProgram")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]
