@@ -30,7 +30,7 @@ builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<IImageService, ImageService>();
 
-//у нас будуть View - це такі сторіки - де можна писати на C# Index.cshtml
+//у нас будуть View - це такі сторінки - де можна писати на C# Index.cshtml
 //Велика перевага цих сторінок у тому, що вони перевіряються на c# і компілюються у збірку
 //WebSmoder.dll - вихідний файл проекту.
 //контролер - це клас на C#, який приймає запити від клієнта і виконує усію логіку роботи.

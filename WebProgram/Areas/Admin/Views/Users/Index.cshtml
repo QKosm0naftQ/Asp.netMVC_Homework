@@ -1,7 +1,7 @@
 @model List<UserItemViewModel>
 @{
 
-	ViewData["Title"] = "Адмін панель - Користувачі";
+	ViewData["Title"] = "РљРѕСЂРёСЃС‚СѓРІР°С‡С–";
 
 }
 
@@ -25,7 +25,7 @@
 				{
 					<tr>
 						<td>@item.Id</td>
-						<td><img class="rounded-circle" style="width:auto;height:3rem" src="/images/200_@item.Image" /></td>
+						<td><img class="rounded-circle" alt="" style="width:auto;height:3rem" src="/images/200_@item.Image" /></td>
 						<td>@item.LastName @item.FirstName</td>
 						<td>@item.Email</td>
 						<td>@String.Join(", ", item.Roles)</td>
