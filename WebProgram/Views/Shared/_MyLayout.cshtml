@@ -28,12 +28,12 @@
                         <li class="nav-item">
                             <a class="nav-link active" aria-current="page" href="#">До дому</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Про нас</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link disabled" aria-disabled="true">В розробці</a>
-                        </li>
+                        @if(User.IsInRole(Roles.Admin))
+                        {
+                            <li class="nav-item">
+                                <a class="nav-link" asp-controller="Users" asp-action="Index" asp-area="Admin">Admin</a>
+                            </li>
+                        }
                     </ul>
                     @if(User.Identity.IsAuthenticated)
                     {

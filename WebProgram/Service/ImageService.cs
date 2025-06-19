@@ -37,6 +37,16 @@ namespace WebProgram.Service
             return await SaveImageAsync(imageBytes);        
         }
 
+        public async Task<string> SaveImageFromBase64Async(string input)
+        {
+            var base64Data = input.Contains(",")
+                ? input.Substring(input.IndexOf(",") + 1)
+                : input;
+
+            byte[] imageBytes = Convert.FromBase64String(base64Data);
+
+            return await SaveImageAsync(imageBytes);
+        }
         public async Task<IFormFile> GetImageAsync(string name)
         {
 

@@ -2,7 +2,7 @@ using AutoMapper;
 using WebProgram.Data.Entities;
 using WebProgram.Models.Product;
 
-namespace WebProgram.Mapper;
+namespace WebProgram.Areas.Admin.Mapper;
 
 public class ProductMapper: Profile
 {
