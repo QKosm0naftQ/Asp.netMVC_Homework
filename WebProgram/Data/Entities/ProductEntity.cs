@@ -1,5 +1,6 @@
 using System.ComponentModel.DataAnnotations;
 using System.ComponentModel.DataAnnotations.Schema;
+using WebProgram.Areas.Admin.Models.Product;
 
 namespace WebProgram.Data.Entities;
 
@@ -17,4 +18,6 @@ public class ProductEntity
     public int CategoryId { get; set; }
     public CategoryEntity? Category { get; set; }
     public ICollection<ProductImageEntity>? ProductImages { get; set; }
+    public ICollection<ProductDescriptionImageEntity> DescriptionImages { get; set; }
+
 }

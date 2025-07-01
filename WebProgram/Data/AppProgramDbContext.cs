@@ -1,5 +1,6 @@
 ﻿using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
+using WebProgram.Areas.Admin.Models.Product;
 using WebProgram.Data.Entities.Identity;
 using WebProgram.Data.Entities;
 
@@ -14,6 +15,8 @@ namespace WebProgram.Data
         public DbSet<ProductEntity> Products { get; set; }
         
         public DbSet<ProductImageEntity> ProductImages { get; set; }
+        
+        public DbSet<ProductDescriptionImageEntity> ProductDescriptionImages { get; set; }
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             base.OnModelCreating(modelBuilder);

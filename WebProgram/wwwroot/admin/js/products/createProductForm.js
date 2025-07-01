@@ -9,7 +9,56 @@
         selector: '#description',
         plugins: 'advlist autolink link image lists charmap preview anchor pagebreak searchreplace wordcount code fullscreen insertdatetime media table help',
         toolbar: 'undo redo | styles | bold italic | alignleft aligncenter alignright alignjustify | bullist numlist outdent indent | link image | preview fullscreen',
-        menubar: 'file edit view insert format tools table help'
+        menubar: 'file edit view insert format tools table help',
+
+        // Налаштування для зображень
+        images_upload_url: '/Admin/Products/UploadDescriptionImage',
+        automatic_uploads: true,
+        images_reuse_filename: false,
+        images_upload_handler: function (blobInfo, progress) {
+            return new Promise((resolve, reject) => {
+                const formData = new FormData();
+                formData.append('file', blobInfo.blob(), blobInfo.filename());
+
+                fetch('/Admin/Products/UploadDescriptionImage', {
+                    method: 'POST',
+                    headers: {
+                        'X-CSRF-TOKEN': document.querySelector('input[name="__RequestVerificationToken"]').value
+                    },
+                    body: formData
+                })
+                    .then(response => response.json())
+                    .then(result => {
+                        if (result.location) {
+                            resolve(result.location);
+                        } else {
+                            reject('Помилка завантаження зображення');
+                        }
+                    })
+                    .catch(error => {
+                        reject('Помилка завантаження: ' + error);
+                    });
+            });
+        },
+
+        // Додаткові налаштування для роботи з зображеннями
+        image_dimensions: false,
+        image_class_list: [
+            {title: 'Responsive', value: 'img-fluid'}
+        ],
+        image_uploadtab: true,
+        file_picker_types: 'image',
+
+        // Налаштування для CSRF-захисту
+        verify_html: true,
+
+        // Налаштування розміру редактора
+        height: 500,
+
+        // Додаткові налаштування
+        relative_urls: false,
+        remove_script_host: false,
+        convert_urls: true
     });
 
     new Sortable(document.getElementById('imageList'), {
