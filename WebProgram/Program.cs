@@ -29,7 +29,7 @@ builder.Services.AddIdentity<UserEntity, RoleEntity>(options =>
 builder.Services.AddAutoMapper(AppDomain.CurrentDomain.GetAssemblies());
 
 builder.Services.AddScoped<IImageService, ImageService>();
-
+builder.Services.AddScoped<ISMTPService, SMTPService>();
 //у нас будуть View - це такі сторінки - де можна писати на C# Index.cshtml
 //Велика перевага цих сторінок у тому, що вони перевіряються на c# і компілюються у збірку
 //WebSmoder.dll - вихідний файл проекту.

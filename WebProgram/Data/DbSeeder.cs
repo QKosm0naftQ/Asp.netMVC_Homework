@@ -7,6 +7,8 @@ using WebProgram.Data.Entities;
 using WebProgram.Data.Entities.Identity;
 using WebProgram.Models.Seeder;
 using WebProgram.Interface;
+using WebProgram.SMTP;
+
 namespace WebProgram.Data
 {
     public static class DbSeeder
@@ -19,7 +21,8 @@ namespace WebProgram.Data
             var userManager = scope.ServiceProvider.GetRequiredService<UserManager<UserEntity>>();
 
             var mapper = scope.ServiceProvider.GetRequiredService<IMapper>();
-
+            var smtpService = scope.ServiceProvider.GetRequiredService<ISMTPService>();
+            
             context.Database.Migrate();
 
             if (!context.Categories.Any()) 
@@ -175,8 +178,20 @@ namespace WebProgram.Data
                     }
                 }
             }
-
+            
+            webApplication.Use(async (context, next) =>
+            {
+                var host = context.Request.Host.Host;
+                Message msgEmail = new Message
+                {
+                    Body = $"Додаток успішно запущено {DateTime.Now}",
+                    Subject = $"Запуск сайту {host}",
+                    To="kostya190807@gmail.com"
+                };
+                await smtpService.SendMessage(msgEmail);
+                Console.WriteLine($"---------{host}----------");
+                await next.Invoke();
+            });
         }
-
     }
 }

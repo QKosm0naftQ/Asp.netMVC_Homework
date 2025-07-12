@@ -104,7 +104,6 @@ public class ProductsController(AppProgramDbContext context,
             return Json(new { error = ex.Message });
         }
     }
-    // ------------------ текст від мене: при збереженні фото стає силка (<p><img src="http://localhost:5294/images/l3ploagj.xym.webp"></p>) - подивитися ще раз дз і фіксанути . Видалення не працює бо треба проредагувати в View і як в категоріях видалення index / фіксанути TinyMVC бо трохи погано зберігає (чекнути в разі чого в петра) /  подумати як зберігати фото можливо як id можливо якось по іншому
     [HttpPost]
     public async Task<IActionResult> Delete(int id)
     {
