@@ -24,6 +24,12 @@
                 <input asp-for="Password" class="form-control" type="password" placeholder="Пароль" />
                 <span asp-validation-for="Password" class="text-danger small"></span>
             </div>
+            <!-- Відновлення -->
+
+            <div class="mb-2 text-end">
+                <a asp-action="ForgotPassword" 
+                   class="btn btn-link">Відновити пароль</a>
+            </div>
 
             <!-- Кнопки -->
             <div class="d-grid gap-2">

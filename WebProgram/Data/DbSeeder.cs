@@ -178,7 +178,7 @@ namespace WebProgram.Data
                     }
                 }
             }
-            
+            /*
             webApplication.Use(async (context, next) =>
             {
                 var host = context.Request.Host.Host;
@@ -192,6 +192,7 @@ namespace WebProgram.Data
                 Console.WriteLine($"---------{host}----------");
                 await next.Invoke();
             });
+            */
         }
     }
 }

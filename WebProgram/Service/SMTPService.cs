@@ -9,11 +9,11 @@ namespace WebProgram.Service;
 public class SMTPService : ISMTPService
 {
 
-    public async Task<bool> SendMessage(Message message)
+    public async Task<bool> SendMessageAsync(Message message)
     {
         using var emailMessage = new MimeMessage();
     
-        var body = new TextPart("plain")
+        var body = new TextPart("html")
         {
             Text = message.Body
         };

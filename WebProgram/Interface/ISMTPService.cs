@@ -4,5 +4,5 @@ namespace WebProgram.Interface;
 
 public interface ISMTPService
 {
-    Task<bool> SendMessage(Message message);
+    Task<bool> SendMessageAsync(Message message);
 }
