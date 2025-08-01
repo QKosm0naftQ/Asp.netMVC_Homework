@@ -70,6 +70,8 @@ public class ProductsController(AppProgramDbContext context,
                 Product = productEntity
             };
         }).ToList();
+
+        newHtml = Regex.Replace(newHtml, @"/images/([^""\s]+)", "/images/100_$1");
         productEntity.Description = newHtml;
         productEntity.DescriptionImages = descriptionImages;
         //----------------------

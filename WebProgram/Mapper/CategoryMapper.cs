@@ -1,6 +1,8 @@
 ﻿using AutoMapper;
 using WebProgram.Data.Entities;
 using WebProgram.Models.Category;
+using WebProgram.Models.Helpers;
+
 namespace WebProgram.Mapper;
 
 public class CategoryMapper : Profile
@@ -18,5 +20,6 @@ public class CategoryMapper : Profile
                 string.IsNullOrEmpty(x.ImageUrl) ? "/pictures/default.jpg" : $"/images/400_{x.ImageUrl}"))
             .ForMember(x => x.ImageFile, opt => opt.Ignore())
             .ReverseMap();
+        CreateMap<CategoryEntity, SelectItemViewModel>();
     }
 }
